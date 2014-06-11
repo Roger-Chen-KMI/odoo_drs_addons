@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="drs_api_temp_inherit" model="ir.ui.view">
+            <field name="name">api-temp-view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"></field>
+            <field name="arch" type="xml">
+                
+                <xpath expr="/form/sheet" position="before">
+                    <header>
+                        <button name="call_sale_order_create"  type="object" string="Sale Create" states="" />
+                        <button name="call_sale_order_cancel"  type="object" string="Sale Cancel" states="" />
+                        <button name="call_invoice_create"  type="object" string="Invoice Create" states="" />
+                        <button name="call_invoice_register_payment"  type="object" string="Invoice Register Payment" states="" />
+                        <button name="call_customer_create"  type="object" string="Customer Create" states="" />
+                        <button name="call_products_deliver"  type="object" string="Product Deliver" states="" />
+                    </header>
+                </xpath>
+                
+            </field>
+        </record>
+    </data>
+</openerp>
